@@ -68,7 +68,7 @@ def open_perf_event(config):
 
 def read_perf_value(fd):
     """Reads the counter value from the perf event file descriptor."""
-    data = os.read(fd, 8)
+    data = os.read(fd, 34)
     return struct.unpack("Q", data)[0]
 
 def get_engine_utilization():
